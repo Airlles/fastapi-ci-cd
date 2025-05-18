@@ -1,3 +1,5 @@
+![CI](https://github.com/Airlles/bobacloud-api/actions/workflows/python-app.yml/badge.svg)
+
 # FastAPI Boba Order Microservice
 
 ```
