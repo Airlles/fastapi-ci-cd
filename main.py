@@ -6,16 +6,19 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {
-        "service": "FastAPI Item Microservice",
-        "status": "online",
+        "service": "FastAPI Boba Order API",
+        "status": "running",
         "version": "1.0.0",
-        "description": "This microservice provides access to item data using RESTful endpoints.",
-        "available_routes": {
-            "GET /": "API service metadata",
-            "GET /items/{item_id}": "Fetch item data by ID"
+        "description": "This API lets you order boba drinks by number or name, and submit your own custom boba order.",
+        "routes": {
+            "GET /order/{ordernum}": "Get a drink recommendation by order number (1–100)",
+            "GET /custom_order/{drink_name}": "Request a drink by keyword (brown, matcha, peach)",
+            "POST /submit_order": "Submit a custom drink order (name, drink, topping)",
+            "GET /docs": "Interactive API docs"
         },
-        "maintainer": "Hani Ahmed"
+        "maintainer": "✨ Hani Ahmed"
     }
+
 
 
 # For Order Numbered Drinks (1-100)
